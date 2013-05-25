@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdhery.core.dao.impl.SysObjectKeyDao">
+
+    <resultMap id="BaseResultMap" type="com.sdhery.core.domain.SysObjectKey">
+        <id column="SYS_OBJECT_KEY" property="sysObjectKey"/>
+        <id column="SYS_OBJECT_KEY_VALUE" property="sysObjectKeyValue"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">SYS_OBJECT_KEY,SYS_OBJECT_KEY_VALUE</sql>
+
+    <insert id="insert" parameterType="com.sdhery.core.domain.SysObjectKey">
+        insert into sys_object_key(SYS_OBJECT_KEY,SYS_OBJECT_KEY_VALUE) values (#{sysObjectKey},#{sysObjectKeyValue})
+    </insert>
+
+    <select id="getById" resultMap="BaseResultMap" resultType="java.lang.String">
+        SELECT <include refid="Base_Column_List" /> FROM sys_object_key where SYS_OBJECT_KEY = #{id}
+    </select>
+
+    <update id="update" parameterType="com.sdhery.core.domain.SysObjectKey">
+        UPDATE sys_object_key SET SYS_OBJECT_KEY_VALUE = #{sysObjectKeyValue}  where SYS_OBJECT_KEY = #{sysObjectKey}
+    </update>
+
+    <delete id="deleteById" parameterType="java.lang.String">DELETE FROM sys_object_key WHERE SYS_OBJECT_KEY = #{id}</delete>
+</mapper>
