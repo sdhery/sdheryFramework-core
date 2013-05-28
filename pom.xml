@@ -22,7 +22,8 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration><!--配置不需要打包哪些文件-->
                     <excludes>
-                        <exclude>config/spring/</exclude>
+                        <exclude>config/spring/applicationContext-datasource.xml</exclude>
+                        <exclude>config/spring/applicationContext-resource.xml</exclude>
                         <exclude>config/*.xml</exclude>
                         <exclude>config/*.properties</exclude>
                     </excludes>

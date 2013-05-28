@@ -34,7 +34,7 @@ public abstract class BaseMybatisDao<E, PK extends Serializable> extends SqlSess
         this.entityClass = ((Class) ((ParameterizedType) genType).getActualTypeArguments()[0]);
     }
 
-    @Autowired
+
     void setSessionFactory(SqlSessionFactory sqlSessionFactory) {
         super.setSqlSessionFactory(sqlSessionFactory);
     }

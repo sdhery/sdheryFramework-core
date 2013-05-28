@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
  * Time: 下午4:26
  * To change this template use File | Settings | File Templates.
  */
-@Repository("sysObjectKeyDao")
+
 public class SysObjectKeyDao extends BaseMybatisDao<SysObjectKey,String> implements ISysObjectKeyDao {
 }

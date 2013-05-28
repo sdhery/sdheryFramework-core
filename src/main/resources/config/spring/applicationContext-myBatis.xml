@@ -14,8 +14,9 @@
     ">
 
 
-
-    <context:component-scan base-package="com.sdhery.core.dao"/>
+    <bean id="sysObjectKeyDao" class="com.sdhery.core.dao.impl.SysObjectKeyDao">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
 
 
 </beans>

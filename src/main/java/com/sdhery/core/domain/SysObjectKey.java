@@ -9,7 +9,7 @@ package com.sdhery.core.domain;
  */
 public class SysObjectKey {
     String sysObjectKey;
-    Integer sysObjectKeyValue;
+    String sysObjectKeyValue;
 
     public String getSysObjectKey() {
         return sysObjectKey;
@@ -19,11 +19,11 @@ public class SysObjectKey {
         this.sysObjectKey = sysObjectKey;
     }
 
-    public Integer getSysObjectKeyValue() {
+    public String getSysObjectKeyValue() {
         return sysObjectKeyValue;
     }
 
-    public void setSysObjectKeyValue(Integer sysObjectKeyValue) {
+    public void setSysObjectKeyValue(String sysObjectKeyValue) {
         this.sysObjectKeyValue = sysObjectKeyValue;
     }
 }
