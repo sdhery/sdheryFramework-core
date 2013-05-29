@@ -14,9 +14,7 @@
     ">
 
 
-    <bean id="sysObjectKeyDao" class="com.sdhery.core.dao.impl.SysObjectKeyDao">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-    </bean>
+    <bean id="sysObjectKeyDao" class="com.sdhery.core.dao.impl.SysObjectKeyDao" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 
 
 </beans>
