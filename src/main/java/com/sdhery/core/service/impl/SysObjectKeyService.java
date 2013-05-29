@@ -15,11 +15,14 @@ import org.springframework.stereotype.Service;
  * Time: 下午5:02
  * To change this template use File | Settings | File Templates.
  */
-@Service("sysObjectKeyService")
+
 public class SysObjectKeyService extends BaseService<SysObjectKey,String> implements ISysObjectKeyService {
-    @Autowired
-    @Qualifier("sysObjectKeyDao")
+
     private ISysObjectKeyDao sysObjectKeyDao;
+
+    public void setSysObjectKeyDao(ISysObjectKeyDao sysObjectKeyDao) {
+        this.sysObjectKeyDao = sysObjectKeyDao;
+    }
 
     protected EntityDao<SysObjectKey, String> getEntityDao() {
         return sysObjectKeyDao;
