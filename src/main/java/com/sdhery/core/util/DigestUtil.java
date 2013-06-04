@@ -55,11 +55,7 @@ public class DigestUtil {
                 count += read;
             }
             byte[] digest = md.digest();
-            StringBuffer fileNameBuffer =
-                    new StringBuffer(128)
-                            .append(filename)
-                            .append(".")
-                            .append(algorithm);
+            StringBuffer fileNameBuffer = new StringBuffer(128).append(filename).append(".").append(algorithm);
             fos = new FileOutputStream(fileNameBuffer.toString());
             OutputStream encodedStream = MimeUtility.encode(fos, "base64");
             encodedStream.write(digest);
