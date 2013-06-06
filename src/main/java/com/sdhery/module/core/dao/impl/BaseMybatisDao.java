@@ -1,12 +1,10 @@
-package com.sdhery.core.dao.impl;
+package com.sdhery.module.core.dao.impl;
 
-import com.sdhery.core.dao.EntityDao;
+import com.sdhery.module.core.dao.EntityDao;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

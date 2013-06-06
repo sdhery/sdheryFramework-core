@@ -1,6 +1,6 @@
-package com.sdhery.core.helper;
+package com.sdhery.module.core.helper;
 
-import com.sdhery.core.service.ISysObjectKeyService;
+import com.sdhery.module.core.service.ISysObjectKeyService;
 
 /**
  * Created with IntelliJ IDEA.

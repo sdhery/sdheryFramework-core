@@ -1,4 +1,4 @@
-package com.sdhery.core.util;
+package com.sdhery.module.core.util;
 
 /**
  * Created with IntelliJ IDEA.

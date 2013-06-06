@@ -1,4 +1,4 @@
-package com.sdhery.core.domain;
+package com.sdhery.module.core.domain;
 
 /**
  * Created with IntelliJ IDEA.

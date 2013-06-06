@@ -1,6 +1,6 @@
-package com.sdhery.core.dao;
+package com.sdhery.module.core.dao;
 
-import com.sdhery.core.domain.SysObjectKey;
+import com.sdhery.module.core.domain.SysObjectKey;
 
 /**
  * Created with IntelliJ IDEA.

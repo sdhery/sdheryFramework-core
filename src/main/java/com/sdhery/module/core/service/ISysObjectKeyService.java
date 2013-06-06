@@ -1,6 +1,6 @@
-package com.sdhery.core.service;
+package com.sdhery.module.core.service;
 
-import com.sdhery.core.domain.SysObjectKey;
+import com.sdhery.module.core.domain.SysObjectKey;
 
 /**
  * Created with IntelliJ IDEA.

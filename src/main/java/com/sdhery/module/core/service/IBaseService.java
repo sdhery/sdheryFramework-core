@@ -1,4 +1,4 @@
-package com.sdhery.core.service;
+package com.sdhery.module.core.service;
 
 import java.io.Serializable;
 

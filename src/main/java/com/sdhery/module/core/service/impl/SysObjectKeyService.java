@@ -1,12 +1,9 @@
-package com.sdhery.core.service.impl;
+package com.sdhery.module.core.service.impl;
 
-import com.sdhery.core.dao.EntityDao;
-import com.sdhery.core.dao.ISysObjectKeyDao;
-import com.sdhery.core.domain.SysObjectKey;
-import com.sdhery.core.service.ISysObjectKeyService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import com.sdhery.module.core.dao.EntityDao;
+import com.sdhery.module.core.dao.ISysObjectKeyDao;
+import com.sdhery.module.core.domain.SysObjectKey;
+import com.sdhery.module.core.service.ISysObjectKeyService;
 
 /**
  * Created with IntelliJ IDEA.

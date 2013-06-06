@@ -1,8 +1,7 @@
-package com.sdhery.core.dao.impl;
+package com.sdhery.module.core.dao.impl;
 
-import com.sdhery.core.dao.ISysObjectKeyDao;
-import com.sdhery.core.domain.SysObjectKey;
-import org.springframework.stereotype.Repository;
+import com.sdhery.module.core.dao.ISysObjectKeyDao;
+import com.sdhery.module.core.domain.SysObjectKey;
 
 /**
  * Created with IntelliJ IDEA.

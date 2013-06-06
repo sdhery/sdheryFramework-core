@@ -1,17 +1,9 @@
-package com.sdhery.core.service.impl;
+package com.sdhery.module.core.service.impl;
 
-import com.sdhery.core.dao.EntityDao;
-import com.sdhery.core.dao.impl.BaseMybatisDao;
-import com.sdhery.core.service.IBaseService;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.sdhery.module.core.dao.EntityDao;
+import com.sdhery.module.core.service.IBaseService;
 
 import java.io.Serializable;
-import java.lang.reflect.Field;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 
 /**
  * Created with IntelliJ IDEA.

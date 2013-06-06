@@ -1,4 +1,4 @@
-package com.sdhery.core.myBatisDialect;
+package com.sdhery.module.core.myBatisDialect;
 
 /**
  * Created with IntelliJ IDEA.

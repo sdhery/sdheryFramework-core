@@ -1,4 +1,4 @@
-package com.sdhery.core.dao;
+package com.sdhery.module.core.dao;
 
 import java.io.Serializable;
 

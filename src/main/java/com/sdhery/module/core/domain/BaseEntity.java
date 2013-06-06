@@ -1,4 +1,4 @@
-package com.sdhery.core.domain;
+package com.sdhery.module.core.domain;
 
 import java.io.Serializable;
 
