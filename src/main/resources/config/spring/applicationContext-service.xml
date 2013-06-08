@@ -14,8 +14,4 @@
     ">
     <bean id="sysObjectKeyService" class="com.sdhery.module.core.service.impl.SysObjectKeyService"
           p:sysObjectKeyDao-ref="sysObjectKeyDao"/>
-
-    <bean id="coreServiceManager" class="com.sdhery.module.core.helper.CoreServiceManager">
-        <property name="sysObjectKeyService" ref="sysObjectKeyService"/>
-    </bean>
 </beans>

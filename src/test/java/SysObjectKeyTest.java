@@ -23,7 +23,7 @@ public class SysObjectKeyTest {
     @Test
     public void testRun() {
         try {
-            System.out.println("----"+sysObjectKeyService.getById("sysUserKey_root").getSysObjectKey());
+            //System.out.println("----"+sysObjectKeyService.getById("sysUserKey_root").getSysObjectKey());
         } catch (Exception e) {
             e.printStackTrace();
         }
