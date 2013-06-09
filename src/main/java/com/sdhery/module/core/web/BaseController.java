@@ -24,10 +24,10 @@ public class BaseController {
     }
 
     public void setSuccess(ModelMap model) {
-        model.put("success", "true");
+        model.put("success", true);
     }
 
     public void setFailure(ModelMap model) {
-        model.put("success", "false");
+        model.put("success", false);
     }
 }

@@ -26,6 +26,7 @@
                         <exclude>config/spring/applicationContext-resource.xml</exclude>
                         <exclude>config/*.xml</exclude>
                         <exclude>config/*.properties</exclude>
+                        <exclude>*.properties</exclude>
                     </excludes>
                 </configuration>
             </plugin>
