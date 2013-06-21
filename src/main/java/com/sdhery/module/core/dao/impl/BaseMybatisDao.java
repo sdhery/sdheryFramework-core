@@ -1,5 +1,6 @@
 package com.sdhery.module.core.dao.impl;
 
+
 import com.sdhery.module.core.dao.EntityDao;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
