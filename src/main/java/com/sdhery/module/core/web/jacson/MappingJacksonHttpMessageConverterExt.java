@@ -30,14 +30,15 @@ public class MappingJacksonHttpMessageConverterExt extends MappingJacksonHttpMes
     protected Object readInternal(Class<?> clazz, HttpInputMessage inputMessage) throws IOException {
         MediaType contentType = inputMessage.getHeaders().getContentType();
         Charset charset = contentType.getCharSet() != null ? contentType.getCharSet() : DEFAULT_CHARSET;
-
         String content = FileCopyUtils.copyToString(new InputStreamReader(inputMessage.getBody(), charset));
-
-        String value = content.substring(content.indexOf("json=") + 5, content.length());
-        if ((value.startsWith("{")) || (value.startsWith("["))) {
-            JavaType javaType = getJavaType(clazz,null);
-            return this.mapper.readValue(value, javaType);
+        JavaType javaType = getJavaType(clazz,null);
+        int index = content.indexOf("json=");
+        if (index > 0) {
+            String value = content.substring(index + 5, content.length());
+            if ((value.startsWith("{")) || (value.startsWith("["))) {
+                return this.mapper.readValue(value, javaType);
+            }
         }
-        return null;
+        return this.mapper.readValue(content, javaType);
     }
 }
