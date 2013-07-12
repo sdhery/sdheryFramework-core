@@ -1,7 +1,7 @@
 package com.sdhery.module.core.myBatisDialect.impl;
 
 import com.sdhery.module.core.myBatisDialect.IDialect;
-import com.sdhery.module.core.util.DBUtil;
+import com.sdhery.module.core.dataBase.DBUtil;
 
 /**
  * Created with IntelliJ IDEA.

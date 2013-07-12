@@ -1,4 +1,4 @@
-package com.sdhery.module.core.util;
+package com.sdhery.module.core.json;
 
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.jackson.map.DeserializationConfig;

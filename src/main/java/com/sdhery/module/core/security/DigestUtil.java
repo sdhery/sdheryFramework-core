@@ -1,4 +1,4 @@
-package com.sdhery.module.core.util;
+package com.sdhery.module.core.security;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeUtility;

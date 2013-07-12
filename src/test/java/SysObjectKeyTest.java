@@ -16,14 +16,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:config/spring/*.xml")
 public class SysObjectKeyTest {
+
     @Autowired
-    @Qualifier("sysObjectKeyService")
     ISysObjectKeyService sysObjectKeyService;
 
     @Test
     public void testRun() {
         try {
-            //System.out.println("----"+sysObjectKeyService.getById("sysUserKey_root").getSysObjectKey());
+            System.out.println("888");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package com.sdhery.module.core.web.jacson;
 
-import com.sdhery.module.core.util.JsonBinder;
+import com.sdhery.module.core.json.JsonBinder;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.JavaType;
 import org.springframework.http.HttpInputMessage;
