@@ -33,11 +33,6 @@ public abstract class BaseMybatisDao<E, PK extends Serializable> extends SqlSess
         this.entityClass = ((Class) ((ParameterizedType) genType).getActualTypeArguments()[0]);
     }
 
-
-    void setSessionFactory(SqlSessionFactory sqlSessionFactory) {
-        super.setSqlSessionFactory(sqlSessionFactory);
-    }
-
     public E getById(PK pk) {
         Object object = getSqlSession().selectOne(getByIdNameSpace(), pk);
         return (E) object;

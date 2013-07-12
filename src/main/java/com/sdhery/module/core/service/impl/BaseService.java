@@ -1,6 +1,7 @@
 package com.sdhery.module.core.service.impl;
 
 import com.sdhery.module.core.dao.EntityDao;
+import com.sdhery.module.core.dataBase.IIDGenerator;
 import com.sdhery.module.core.service.IBaseService;
 
 import java.io.Serializable;
@@ -14,6 +15,15 @@ import java.io.Serializable;
  */
 public abstract class BaseService<E, PK extends Serializable> implements IBaseService<E, PK> {
     protected abstract EntityDao<E, PK> getEntityDao();
+    IIDGenerator idGenerator;
+
+    public void setIdGenerator(IIDGenerator idGenerator) {
+        this.idGenerator = idGenerator;
+    }
+
+    public IIDGenerator getIdGenerator() {
+        return idGenerator;
+    }
 
     public E getById(PK id) {
         return getEntityDao().getById(id);

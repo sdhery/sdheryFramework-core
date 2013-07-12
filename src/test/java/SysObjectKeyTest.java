@@ -1,3 +1,5 @@
+import com.sdhery.module.core.dataBase.IIDGenerator;
+import com.sdhery.module.core.myBatisDialect.IDialect;
 import com.sdhery.module.core.service.ISysObjectKeyService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -5,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import javax.annotation.Resource;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,10 +24,13 @@ public class SysObjectKeyTest {
     @Autowired
     ISysObjectKeyService sysObjectKeyService;
 
+    @Resource
+    IIDGenerator mysqlIDGenerator;
+
     @Test
     public void testRun() {
         try {
-            System.out.println("888");
+            System.out.println(mysqlIDGenerator.getId("sys_tree"));
         } catch (Exception e) {
             e.printStackTrace();
         }

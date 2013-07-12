@@ -36,6 +36,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration><!--配置不需要打包哪些文件-->
+                    <classesDirectory>target/classes/</classesDirectory>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
                     <excludes>
                         <exclude>config/spring/applicationContext-datasource.xml</exclude>
                         <exclude>config/spring/applicationContext-resource.xml</exclude>
