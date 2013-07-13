@@ -1,5 +1,7 @@
 package com.sdhery.module.core.filter;
 
+import com.sdhery.module.core.web.impl.DefaultWebContext;
+import com.sdhery.module.core.web.impl.WebContextFactory;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 import javax.servlet.FilterChain;
@@ -29,6 +31,12 @@ public class SetCharacterEncodingFilter extends CharacterEncodingFilter {
         if (FilterUtil.doExclude(request, response, getFilterConfig())) {
             filterChain.doFilter(request, response);
             return;
+        }
+        DefaultWebContext ctx = (DefaultWebContext) WebContextFactory.getWebContext();
+        if (((request instanceof HttpServletRequest)) && ((response instanceof HttpServletResponse))) {
+            ctx.setRequest((HttpServletRequest) request);
+            ctx.setResponse((HttpServletResponse) response);
+            ctx.setSession(((HttpServletRequest) request).getSession());
         }
 
         super.doFilterInternal(request, response, filterChain);
