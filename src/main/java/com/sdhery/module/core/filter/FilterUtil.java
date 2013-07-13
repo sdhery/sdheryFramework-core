@@ -13,7 +13,7 @@ import java.io.IOException;
  * Time: 下午4:46
  * To change this template use File | Settings | File Templates.
  */
-public class BaseFilter {
+public class FilterUtil {
 
     /**
      * 排除的url
@@ -25,7 +25,7 @@ public class BaseFilter {
      * @throws ServletException
      * @throws IOException
      */
-    public boolean doExclude(ServletRequest request, ServletResponse response, FilterConfig filterConfig) throws ServletException, IOException {
+    public static boolean doExclude(ServletRequest request, ServletResponse response, FilterConfig filterConfig) throws ServletException, IOException {
         String excludeUrls = filterConfig.getInitParameter("excludeUrls");
         if (excludeUrls == null) {
             return false;
@@ -59,7 +59,7 @@ public class BaseFilter {
      * @throws ServletException
      * @throws IOException
      */
-    public boolean doInclude(ServletRequest request, ServletResponse response, FilterConfig filterConfig) throws ServletException, IOException {
+    public static boolean doInclude(ServletRequest request, ServletResponse response, FilterConfig filterConfig) throws ServletException, IOException {
         String includeUrls = filterConfig.getInitParameter("includeUrls");
         if (StringUtils.isBlank(includeUrls)) {
             return true;
