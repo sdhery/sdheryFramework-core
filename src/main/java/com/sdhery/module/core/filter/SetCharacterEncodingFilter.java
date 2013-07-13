@@ -19,22 +19,18 @@ public class SetCharacterEncodingFilter extends CharacterEncodingFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if (!this.doInclude(request, response, filterChain)) {
+        //非加载URL
+        if (!FilterUtil.doInclude(request, response, getFilterConfig())) {
             filterChain.doFilter(request, response);
             return;
         }
 
-        //对配置的excludeUrls参数包含的URL进行过滤,例如：/OurHome/;/OurHome/*;/OurHome/*.jpg
-        if (this.doExclude(request, response, filterChain)) {
+        //过滤的URL
+        if (FilterUtil.doExclude(request, response, getFilterConfig())) {
             filterChain.doFilter(request, response);
             return;
         }
 
-        WebContextService ctx = (WebContextService) WebContextFactory.getWebContext();
-        if (((request instanceof HttpServletRequest)) && ((response instanceof HttpServletResponse))) {
-            ctx.setRequest((HttpServletRequest) request);
-            ctx.setResponse((HttpServletResponse) response);
-        }
         super.doFilterInternal(request, response, filterChain);
     }
 }
