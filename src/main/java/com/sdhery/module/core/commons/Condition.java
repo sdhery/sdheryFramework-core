@@ -36,7 +36,7 @@ public class Condition {
         this.orderByClause = orderByClause;
     }
 
-    public boolean isDistinct() {
+    public boolean getDistinct() {
         return distinct;
     }
 
@@ -50,6 +50,10 @@ public class Condition {
 
     public void setConditionItems(List<ConditionItem> conditionItems) {
         this.conditionItems = conditionItems;
+    }
+
+    public boolean isValid() {
+        return conditionItems.size() > 0;
     }
 
     public static class ConditionItem {
