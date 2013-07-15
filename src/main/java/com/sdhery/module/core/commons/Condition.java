@@ -28,6 +28,30 @@ public class Condition {
         conditionItems = new ArrayList<ConditionItem>();
     }
 
+    public String getOrderByClause() {
+        return orderByClause;
+    }
+
+    public void setOrderByClause(String orderByClause) {
+        this.orderByClause = orderByClause;
+    }
+
+    public boolean isDistinct() {
+        return distinct;
+    }
+
+    public void setDistinct(boolean distinct) {
+        this.distinct = distinct;
+    }
+
+    public List<ConditionItem> getConditionItems() {
+        return conditionItems;
+    }
+
+    public void setConditionItems(List<ConditionItem> conditionItems) {
+        this.conditionItems = conditionItems;
+    }
+
     public static class ConditionItem {
         /**
          * 条件
