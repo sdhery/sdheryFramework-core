@@ -16,4 +16,5 @@
           p:sysObjectKeyDao-ref="sysObjectKeyDao"/>
 
     <bean class="com.sdhery.module.core.util.spring.SpringContextHolder"/>
+    <bean class="com.sdhery.module.core.web.impl.WebContextFactory"/>
 </beans>

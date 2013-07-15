@@ -32,10 +32,10 @@ public class DefaultWebContext implements IWebContext {
     }
 
     public HttpServletRequest getRequest() {
-        return null;
+        return request;
     }
 
     public HttpServletResponse getResponse() {
-        return null;
+        return response;
     }
 }
