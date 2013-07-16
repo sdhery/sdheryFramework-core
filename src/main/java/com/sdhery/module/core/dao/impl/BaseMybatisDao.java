@@ -1,6 +1,7 @@
 package com.sdhery.module.core.dao.impl;
 
 
+import com.sdhery.module.core.commons.Condition;
 import com.sdhery.module.core.dao.EntityDao;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -10,6 +11,7 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -50,6 +52,14 @@ public abstract class BaseMybatisDao<E, PK extends Serializable> extends SqlSess
         return getSqlSession().insert(updateNameSpace(), object);
     }
 
+    public List<E> search(Condition condition) {
+        return getSqlSession().selectList(searchNameSpace(), condition);
+    }
+
+    public int count(Condition condition) {
+        return (Integer)getSqlSession().selectOne(searchNameSpace(), condition);
+    }
+
     public String getByIdNameSpace() {
         return getClass().getName() + ".getById";
     }
@@ -64,6 +74,14 @@ public abstract class BaseMybatisDao<E, PK extends Serializable> extends SqlSess
 
     public String updateNameSpace() {
         return getClass().getName() + ".update";
+    }
+
+    public String searchNameSpace() {
+        return getClass().getName() + ".search";
+    }
+
+    public String countNameSpace() {
+        return getClass().getName() + ".count";
     }
 
 }

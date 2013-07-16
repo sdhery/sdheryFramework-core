@@ -1,10 +1,12 @@
 package com.sdhery.module.core.service.impl;
 
+import com.sdhery.module.core.commons.Condition;
 import com.sdhery.module.core.dao.EntityDao;
 import com.sdhery.module.core.dataBase.IIDGenerator;
 import com.sdhery.module.core.service.IBaseService;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,5 +43,12 @@ public abstract class BaseService<E, PK extends Serializable> implements IBaseSe
         return getEntityDao().update(e);
     }
 
+    public List<E> search(Condition condition){
+        return getEntityDao().search(condition);
+    }
+
+    public int count(Condition condition){
+        return getEntityDao().count(condition);
+    }
 
 }

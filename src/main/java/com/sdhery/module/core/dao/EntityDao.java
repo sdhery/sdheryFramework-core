@@ -1,6 +1,9 @@
 package com.sdhery.module.core.dao;
 
+import com.sdhery.module.core.commons.Condition;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,4 +20,8 @@ public interface EntityDao <E, PK extends Serializable> {
     int insert(E e);
 
     int update(E e);
+
+    List<E> search(Condition condition);
+
+    int count(Condition condition);
 }

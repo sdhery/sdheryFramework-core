@@ -1,6 +1,9 @@
 package com.sdhery.module.core.service;
 
+import com.sdhery.module.core.commons.Condition;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,4 +20,8 @@ public interface IBaseService<E, PK extends Serializable> {
     public int insert(E e);
 
     public int update(E e);
+
+    public List<E> search(Condition condition);
+
+    public int count(Condition condition);
 }
